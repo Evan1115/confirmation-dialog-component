@@ -73,7 +73,7 @@ class Modal extends HTMLElement {
                 height: 100vh;
                 width: 100vw;
                 background-color: rgba(0, 0, 0, 0.3);
-                opacity: 1;
+                opacity: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center; 
@@ -184,12 +184,6 @@ class Modal extends HTMLElement {
     yesButton.addEventListener("click", (e) => {
       this.publishEvent("yes");
     });
-
-    window.addEventListener("click", (e) => {
-      if (e.target.tagName == "MODAL-COMPONENT") {
-        this.publishEvent("outsideClick");
-      }
-    });
   }
 
   //publish event to the outside of the component
@@ -199,5 +193,5 @@ class Modal extends HTMLElement {
   }
 }
 
-//define component nanme
+//define component name
 window.customElements.define("modal-component", Modal);

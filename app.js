@@ -18,18 +18,22 @@ const handleEventListener = (modal, button) => {
   });
 };
 
+//display message based on the button clicked
 const displayMessage = (type) => {
   switch (type) {
     case "cancel":
-      message.innerHTML = 'You just clicked "Cancel" !';
+      message.innerHTML = 'You just clicked "Cancel" !!';
       break;
     case "yes":
-      message.innerHTML = 'You just clicked "Yes" !';
+      message.innerHTML = 'You just clicked "Yes" !!';
       break;
     default:
       message.innerHTML = "";
   }
 };
 
+//handle event for modal 1 and button 1
 handleEventListener(modal_1, button_1);
+
+//handle event for modal 2 and button 2
 handleEventListener(modal_2, button_2);
