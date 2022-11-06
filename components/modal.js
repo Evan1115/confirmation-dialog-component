@@ -178,7 +178,7 @@ class Modal extends HTMLElement {
     });
 
     exitButton.addEventListener("click", (e) => {
-      this.publishEvent("exit");
+      this.publishEvent("cancel");
     });
 
     yesButton.addEventListener("click", (e) => {
